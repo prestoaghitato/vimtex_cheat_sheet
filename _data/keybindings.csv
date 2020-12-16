@@ -1,0 +1,7 @@
+kbd,explanation
+]],"close environment in insert mode"
+cse,"change an environment"
+dse,"delete an environment"
+tse,"toggle starred environment"
+vie,"select inside of environment"
+vae,"select inside of environment, including environment tags"
