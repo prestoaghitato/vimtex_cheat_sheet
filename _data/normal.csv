@@ -1,5 +1,4 @@
 kbd,explanation
-]],"close environment in insert mode"
 cse,"change an environment"
 dse,"delete an environment"
 tse,"toggle starred environment"
