@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en-UK" }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-    {{ content}}
+    <h1>VimTeX Cheat Sheet</h1>  <!-- {{ page.title }} does not work, fuck knows why -->
+
+    <h2>Normal Mode</h2>
+    <table>
+      <tr>
+        <th>Keybinding</th>
+        <th>Explanation</th>
+      </tr>
+        {% for cheat in site.data.normal %}
+          <tr>
+            <td>{{ cheat.kbd }}</td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </table>
+      
+    </body>
   </body>
 </html>
