@@ -4,3 +4,11 @@ dse,"delete an environment"
 tse,"toggle starred environment"
 vie,"select inside of environment"
 vae,"select inside of environment, including environment tags"
+[[,move to beginning of previous section
+]],move to beginning of next section
+[],move to end of previous section
+][,move to end of next section
+[m,move to beginning of previous environment
+]m,move to beginning of next environment
+[M,move to end of previous environment
+]M,move to end of next environment
