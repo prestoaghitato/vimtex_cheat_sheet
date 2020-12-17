@@ -1,7 +1,0 @@
-kbd,explanation
-:VimtexInfo,show info about current project
-:VimtexTocOpen,show table of contents window
-:VimtexTocToggle,toggle table of contents window
-:VimtexCompile,start compiler in continuous mode
-:VimtexStop,abort compilation
-:VimtexClean,delete auxiliary files

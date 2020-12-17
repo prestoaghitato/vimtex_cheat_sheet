@@ -1,14 +1,44 @@
-<h2>Normal Mode</h2>
+{%- comment -%}
+  Include vars:
+  modes
+  sections
+{%- endcomment -%}
+
+<h1>BEGIN INCLUDE</h1>
+
+
+
+{% for mode in include.modes %}
+  <h2>{{ mode }} Mode</h2>
+  {% for sec in include.sections %}
+    <h3>{{ sec }}</h3>
+    <table>
+      {% for cheat in site.data.normal %}
+        {% if cheat.section == sec %}
+          <tr>
+            <td><kbd>{{ cheat.kbd }}</kbd></td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+  {% endfor %}
+{% endfor %}
+
+
+
+<!--
 <table>
-  <tr>
-    <th>Keybinding</th>
-    <th>Explanation</th>
-  </tr>
-    {% for cheat in site.data.normal %}
-      <tr>
-        <td>{{ cheat.kbd }}</td>
-        <td>{{ cheat.explanation }}</td>
-      </tr>
-    {% endfor %}
-  </table>
+  {% for cheat in site.data.normal %}
+    <tr>
+      <td><kbd>{{ cheat.kbd }}</kbd></td>
+      <td>{{ cheat.explanation }}</td>
+    </tr>
+  {% endfor %}
 </table>
+
+    {% for section in sections %}
+      {{ section }}
+    {% endfor %}
+-->
+<h1>END INCLUDE</h1>

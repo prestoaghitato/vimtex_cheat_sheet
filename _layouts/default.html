@@ -7,73 +7,35 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-    <!-- {{ page.title }} does not work, fuck knows why -->
-    <h1>VimTeX Cheat Sheet</h1>
 
-    <!-- can be more concise with directorytag plugin
-         https://github.com/sillylogger/jekyll-directory
-         but doesn't work and I cba
-    {% directory path: _data %}
-    <h2>{{ file.name | remove: ".csv" }} Mode</h2>
-    <table>
-      <tr>
-        <th>Keybinding</th>
-        <th>Explanation</th>
-      </tr>
-        {% for cheat in site.data.normal %}
-          <tr>
-            <td>{{ cheat.kbd }}</td>
-            <td>{{ cheat.explanation }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </table>
-    {% enddirectory %}
-    -->
+  {% assign modes = "commands,normal,insert,visual" | split: "," %}
+  {% assign sections = "environment,movement,general" | split: "," %}
 
-    <h2>Commands</h2>
-    <table>
-        {% for cheat in site.data.commands %}
-          <tr>
-            <td><kbd>{{ cheat.kbd }}</kbd></td>
-            <td>{{ cheat.explanation }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </table>
-
-    <h2>Normal Mode</h2>
-    <table>
-        {% for cheat in site.data.normal %}
-          <tr>
-            <td><kbd>{{ cheat.kbd }}</kbd></td>
-            <td>{{ cheat.explanation }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </table>
-    
-    <h2>Insert Mode</h2>
-    <table>
-        {% for cheat in site.data.insert %}
-          <tr>
-            <td><kbd>{{ cheat.kbd }}</kbd></td>
-            <td>{{ cheat.explanation }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </table>
-
-    <h2>Visual Mode</h2>
-    <table>
-        {% for cheat in site.data.visual %}
-          <tr>
-            <td><kbd>{{ cheat.kbd }}</kbd></td>
-            <td>{{ cheat.explanation }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </table>
+  {% for mode in modes %}
+    <h2>{{ mode | capitalize }} Mode</h2>
+    {% for sections in sections %}
+      {% assign exists = false %}
+      {% for cheat in site.data.normal %}
+        {% if cheat.section == sections and cheat.mode == mode %}
+          {% assign exists = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if exists %}
+        <h3>{{ sections | capitalize }}</h3>
+        <table>
+          {% for cheat in site.data.normal %}
+            {% if cheat.section == sections and cheat.mode == mode %}
+              <tr>
+                <td><kbd>{{ cheat.kbd }}</kbd></td>
+                <td>{{ cheat.explanation }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </table>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
 
   </body>
 </html>

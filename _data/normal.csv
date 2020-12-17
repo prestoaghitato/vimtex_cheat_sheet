@@ -1,14 +1,21 @@
-kbd,explanation
-cse,"change an environment"
-dse,"delete an environment"
-tse,"toggle starred environment"
-vie,"select inside of environment"
-vae,"select inside of environment, including environment tags"
-[[,move to beginning of previous section
-]],move to beginning of next section
-[],move to end of previous section
-][,move to end of next section
-[m,move to beginning of previous environment
-]m,move to beginning of next environment
-[M,move to end of previous environment
-]M,move to end of next environment
+kbd,explanation,mode,section
+cse,"change an environment",normal,environment
+dse,"delete an environment",normal,environment
+tse,"toggle starred environment",normal,environment
+vie,"select inside of environment",normal,environment
+vae,"select inside of environment, including environment tags",normal,environment
+[[,move to beginning of previous section,normal,movement
+]],move to beginning of next section,normal,movement
+[],move to end of previous section,normal,movement
+][,move to end of next section,normal,movement
+[m,move to beginning of previous environment,normal,movement
+]m,move to beginning of next environment,normal,movement
+[M,move to end of previous environment,normal,movement
+]M,move to end of next environment,normal,movement
+:VimtexInfo,show info about current project,commands,general
+:VimtexTocOpen,show table of contents window,commands,general
+:VimtexTocToggle,toggle table of contents window,commands,general
+:VimtexCompile,start compiler in continuous mode,commands,general
+:VimtexStop,abort compilation,commands,general
+:VimtexClean,delete auxiliary files,commands,general
+]],"close environment",insert,general
