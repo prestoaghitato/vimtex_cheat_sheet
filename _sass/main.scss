@@ -1,5 +1,6 @@
 $backgroundColor: #ededed;
-$mediumgray: #dddddd;
+$lightgray: #dddddd;
+$mediumgray: #cccccc;
 $bodyColor: #202020;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
@@ -16,6 +17,7 @@ table {
 blockquote {
   background-color: $mediumgray;
   padding: 0.5em 1.5em;
+  margin: 1.5em;
   border-radius: 12px;
 }
 
@@ -30,3 +32,39 @@ kbd {
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
+
+.wrapper {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.wrapper > div {
+  background: $lightgray;
+  padding: 0em 1em 1em 1em ;
+  border-radius: 12px;
+}
+
+@media (max-width: 1400px)  and (min-width: 800px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/*
+// temporary grid debugging stuff
+.wrapper > div {
+  background: #ffdddd;
+}
+
+.wrapper > div:nth-child(odd) {
+  background: #ddffdd;
+}
+*/
+
