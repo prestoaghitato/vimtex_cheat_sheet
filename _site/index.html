@@ -1,15 +1,444 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-UK">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Happy Jekylling! - </title>
+    <title> - VimTeX Cheat Sheet</title>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <h2 id="youre-ready-to-go">You’re ready to go!</h2>
+    <!--  does not work, fuck knows why -->
+    <h1>VimTeX Cheat Sheet</h1>
 
-<p>Start developing your Jekyll website.</p>
+    <!-- can be more concise with directorytag plugin
+         https://github.com/sillylogger/jekyll-directory
+         but doesn't work and I cba
+    
+    <h2>commands Mode</h2>
+    <table>
+      <tr>
+        <th>Keybinding</th>
+        <th>Explanation</th>
+      </tr>
+        
+          <tr>
+            <td>cse</td>
+            <td>change an environment</td>
+          </tr>
+        
+          <tr>
+            <td>dse</td>
+            <td>delete an environment</td>
+          </tr>
+        
+          <tr>
+            <td>tse</td>
+            <td>toggle starred environment</td>
+          </tr>
+        
+          <tr>
+            <td>vie</td>
+            <td>select inside of environment</td>
+          </tr>
+        
+          <tr>
+            <td>vae</td>
+            <td>select inside of environment, including environment tags</td>
+          </tr>
+        
+          <tr>
+            <td>[[</td>
+            <td>move to beginning of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>]]</td>
+            <td>move to beginning of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[]</td>
+            <td>move to end of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>][</td>
+            <td>move to end of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[m</td>
+            <td>move to beginning of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]m</td>
+            <td>move to beginning of next environment</td>
+          </tr>
+        
+          <tr>
+            <td>[M</td>
+            <td>move to end of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]M</td>
+            <td>move to end of next environment</td>
+          </tr>
+        
+      </table>
+    </table>
+    
+    <h2>insert Mode</h2>
+    <table>
+      <tr>
+        <th>Keybinding</th>
+        <th>Explanation</th>
+      </tr>
+        
+          <tr>
+            <td>cse</td>
+            <td>change an environment</td>
+          </tr>
+        
+          <tr>
+            <td>dse</td>
+            <td>delete an environment</td>
+          </tr>
+        
+          <tr>
+            <td>tse</td>
+            <td>toggle starred environment</td>
+          </tr>
+        
+          <tr>
+            <td>vie</td>
+            <td>select inside of environment</td>
+          </tr>
+        
+          <tr>
+            <td>vae</td>
+            <td>select inside of environment, including environment tags</td>
+          </tr>
+        
+          <tr>
+            <td>[[</td>
+            <td>move to beginning of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>]]</td>
+            <td>move to beginning of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[]</td>
+            <td>move to end of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>][</td>
+            <td>move to end of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[m</td>
+            <td>move to beginning of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]m</td>
+            <td>move to beginning of next environment</td>
+          </tr>
+        
+          <tr>
+            <td>[M</td>
+            <td>move to end of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]M</td>
+            <td>move to end of next environment</td>
+          </tr>
+        
+      </table>
+    </table>
+    
+    <h2>normal Mode</h2>
+    <table>
+      <tr>
+        <th>Keybinding</th>
+        <th>Explanation</th>
+      </tr>
+        
+          <tr>
+            <td>cse</td>
+            <td>change an environment</td>
+          </tr>
+        
+          <tr>
+            <td>dse</td>
+            <td>delete an environment</td>
+          </tr>
+        
+          <tr>
+            <td>tse</td>
+            <td>toggle starred environment</td>
+          </tr>
+        
+          <tr>
+            <td>vie</td>
+            <td>select inside of environment</td>
+          </tr>
+        
+          <tr>
+            <td>vae</td>
+            <td>select inside of environment, including environment tags</td>
+          </tr>
+        
+          <tr>
+            <td>[[</td>
+            <td>move to beginning of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>]]</td>
+            <td>move to beginning of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[]</td>
+            <td>move to end of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>][</td>
+            <td>move to end of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[m</td>
+            <td>move to beginning of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]m</td>
+            <td>move to beginning of next environment</td>
+          </tr>
+        
+          <tr>
+            <td>[M</td>
+            <td>move to end of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]M</td>
+            <td>move to end of next environment</td>
+          </tr>
+        
+      </table>
+    </table>
+    
+    <h2>visual Mode</h2>
+    <table>
+      <tr>
+        <th>Keybinding</th>
+        <th>Explanation</th>
+      </tr>
+        
+          <tr>
+            <td>cse</td>
+            <td>change an environment</td>
+          </tr>
+        
+          <tr>
+            <td>dse</td>
+            <td>delete an environment</td>
+          </tr>
+        
+          <tr>
+            <td>tse</td>
+            <td>toggle starred environment</td>
+          </tr>
+        
+          <tr>
+            <td>vie</td>
+            <td>select inside of environment</td>
+          </tr>
+        
+          <tr>
+            <td>vae</td>
+            <td>select inside of environment, including environment tags</td>
+          </tr>
+        
+          <tr>
+            <td>[[</td>
+            <td>move to beginning of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>]]</td>
+            <td>move to beginning of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[]</td>
+            <td>move to end of previous section</td>
+          </tr>
+        
+          <tr>
+            <td>][</td>
+            <td>move to end of next section</td>
+          </tr>
+        
+          <tr>
+            <td>[m</td>
+            <td>move to beginning of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]m</td>
+            <td>move to beginning of next environment</td>
+          </tr>
+        
+          <tr>
+            <td>[M</td>
+            <td>move to end of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td>]M</td>
+            <td>move to end of next environment</td>
+          </tr>
+        
+      </table>
+    </table>
+    
+    -->
+
+    <h2>Commands</h2>
+    <table>
+        
+          <tr>
+            <td><kbd>:VimtexInfo</kbd></td>
+            <td>show info about current project</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>:VimtexTocOpen</kbd></td>
+            <td>show table of contents window</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>:VimtexTocToggle</kbd></td>
+            <td>toggle table of contents window</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>:VimtexCompile</kbd></td>
+            <td>start compiler in continuous mode</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>:VimtexStop</kbd></td>
+            <td>abort compilation</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>:VimtexClean</kbd></td>
+            <td>delete auxiliary files</td>
+          </tr>
+        
+      </table>
+    </table>
+
+    <h2>Normal Mode</h2>
+    <table>
+        
+          <tr>
+            <td><kbd>cse</kbd></td>
+            <td>change an environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>dse</kbd></td>
+            <td>delete an environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>tse</kbd></td>
+            <td>toggle starred environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>vie</kbd></td>
+            <td>select inside of environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>vae</kbd></td>
+            <td>select inside of environment, including environment tags</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>[[</kbd></td>
+            <td>move to beginning of previous section</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>]]</kbd></td>
+            <td>move to beginning of next section</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>[]</kbd></td>
+            <td>move to end of previous section</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>][</kbd></td>
+            <td>move to end of next section</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>[m</kbd></td>
+            <td>move to beginning of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>]m</kbd></td>
+            <td>move to beginning of next environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>[M</kbd></td>
+            <td>move to end of previous environment</td>
+          </tr>
+        
+          <tr>
+            <td><kbd>]M</kbd></td>
+            <td>move to end of next environment</td>
+          </tr>
+        
+      </table>
+    </table>
+    
+    <h2>Insert Mode</h2>
+    <table>
+        
+          <tr>
+            <td><kbd>]]</kbd></td>
+            <td>close environment</td>
+          </tr>
+        
+      </table>
+    </table>
+
+    <h2>Visual Mode</h2>
+    <table>
+        
+      </table>
+    </table>
 
   </body>
 </html>
