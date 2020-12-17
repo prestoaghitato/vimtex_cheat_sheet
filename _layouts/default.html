@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-    <h1>VimTeX Cheat Sheet</h1>  <!-- {{ page.title }} does not work, fuck knows why -->
+    <!-- {{ page.title }} does not work, fuck knows why -->
+    <h1>VimTeX Cheat Sheet</h1>
 
-    <h2>Normal Mode</h2>
+    <!-- can be more concise with directorytag plugin
+         https://github.com/sillylogger/jekyll-directory
+         but doesn't work and I cba
+    {% directory path: _data %}
+    <h2>{{ file.name | remove: ".csv" }} Mode</h2>
     <table>
       <tr>
         <th>Keybinding</th>
@@ -23,7 +28,52 @@
         {% endfor %}
       </table>
     </table>
-      
-    </body>
+    {% enddirectory %}
+    -->
+
+    <h2>Commands</h2>
+    <table>
+        {% for cheat in site.data.commands %}
+          <tr>
+            <td><kbd>{{ cheat.kbd }}</kbd></td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </table>
+
+    <h2>Normal Mode</h2>
+    <table>
+        {% for cheat in site.data.normal %}
+          <tr>
+            <td><kbd>{{ cheat.kbd }}</kbd></td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </table>
+    
+    <h2>Insert Mode</h2>
+    <table>
+        {% for cheat in site.data.insert %}
+          <tr>
+            <td><kbd>{{ cheat.kbd }}</kbd></td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </table>
+
+    <h2>Visual Mode</h2>
+    <table>
+        {% for cheat in site.data.visual %}
+          <tr>
+            <td><kbd>{{ cheat.kbd }}</kbd></td>
+            <td>{{ cheat.explanation }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </table>
+
   </body>
 </html>
