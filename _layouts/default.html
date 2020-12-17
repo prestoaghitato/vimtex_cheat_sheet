@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-
+  <h1>{{ site.title }}</h1>
   {% assign modes = "commands,normal,insert,visual" | split: "," %}
-  {% assign sections = "environment,movement,general" | split: "," %}
+  {% assign sections = "environment,movement,text objects,command,maths,general" | split: "," %}
 
   {% for mode in modes %}
     <h2>{{ mode | capitalize }} Mode</h2>
-    {% for sections in sections %}
+    {% for section in sections %}
       {% assign exists = false %}
       {% for cheat in site.data.normal %}
-        {% if cheat.section == sections and cheat.mode == mode %}
+        {% if cheat.section == section and cheat.mode == mode %}
           {% assign exists = true %}
           {% break %}
         {% endif %}
       {% endfor %}
       {% if exists %}
-        <h3>{{ sections | capitalize }}</h3>
+        <h3>{{ section | capitalize }}</h3>
         <table>
           {% for cheat in site.data.normal %}
-            {% if cheat.section == sections and cheat.mode == mode %}
+            {% if cheat.section == section and cheat.mode == mode %}
               <tr>
                 <td><kbd>{{ cheat.kbd }}</kbd></td>
                 <td>{{ cheat.explanation }}</td>
@@ -33,6 +33,12 @@
             {% endif %}
           {% endfor %}
         </table>
+        {% assign notes = site.notes | where: "mode", mode | where: "section", section %}
+        {% for note in notes %}
+          <blockquote>
+            {{ note }}
+          </blockquote>
+        {% endfor %}
       {% endif %}
     {% endfor %}
   {% endfor %}

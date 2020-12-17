@@ -4,6 +4,13 @@ dse,"delete an environment",normal,environment
 tse,"toggle starred environment",normal,environment
 vie,"select inside of environment",normal,environment
 vae,"select inside of environment, including environment tags",normal,environment
+csc,"change command",normal,command
+dsc,"delete command",normal,command
+tsc,"toggle starred command",normal,command
+csd,"change delimiter",normal,maths
+dsd,"delete delimiter",normal,maths
+tsd,"toggle between () and \left(\right)",maths
+ds$,"delete inline math",normal,maths
 [[,move to beginning of previous section,normal,movement
 ]],move to beginning of next section,normal,movement
 [],move to end of previous section,normal,movement
@@ -19,3 +26,9 @@ vae,"select inside of environment, including environment tags",normal,environmen
 :VimtexStop,abort compilation,commands,general
 :VimtexClean,delete auxiliary files,commands,general
 ]],"close environment",insert,general
+c,commands,normal,text objects
+d,delimiters,normal,text objects
+e,environments,normal,text objects
+$,inline math,normal,text objects
+P,sections,normal,text objects
+m,items,normal,text objects
