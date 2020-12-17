@@ -1,0 +1,14 @@
+<h2>Normal Mode</h2>
+<table>
+  <tr>
+    <th>Keybinding</th>
+    <th>Explanation</th>
+  </tr>
+    {% for cheat in site.data.normal %}
+      <tr>
+        <td>{{ cheat.kbd }}</td>
+        <td>{{ cheat.explanation }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</table>
